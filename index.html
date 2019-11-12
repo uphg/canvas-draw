@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一个简单的画板</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="drawingBoard">
+        <canvas class="draw"></canvas>
+        <div class="tool">
+            <div class="color">
+                    <svg class="icon active" aria-hidden="true">
+                        <use xlink:href="#icon-tiaose"></use>
+                    </svg>
+            </div>
+            <div class="title">
+                <div class="part pen">
+                    <svg class="icon active" aria-hidden="true">
+                        <use xlink:href="#icon-pen"></use>
+                    </svg>
+                </div>
+                <div class="part eraser">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-eraser"></use>
+                    </svg>
+                </div>
+                <div class="part size">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-cuxi"></use>
+                    </svg>
+                </div>
+                <div class="part color-list">
+                    <ul>
+                        <li><a class="active" herf="javascript:volid(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-duigou"></use></svg></a></li>
+                        <li><a herf="javascript:volid(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-duigou"></use></svg></a></li>
+                        <li><a herf="javascript:volid(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-duigou"></use></svg></a></li>
+                        <li><a herf="javascript:volid(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-duigou"></use></svg></a></li>
+                        <li><a herf="javascript:volid(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-duigou"></use></svg></a></li>
+                        <li><a herf="javascript:volid(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-duigou"></use></svg></a></li>
+                    </ul>
+                </div>
+                <div class="part delete">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-shanchu"></use>
+                    </svg>
+                </div>
+            
+                <div class="part download">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-xiazai"></use>
+                    </svg>
+                </div>
+            </div>
+            
+        </div>
+        <div class="option">
+            <div class="part size-list">
+                <h2>画笔粗细</h2>
+                <ul>
+                    <li><a class="active" herf="javascript:volid(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dian"></use></svg></a></li>
+                    <li><a herf="javascript:volid(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dian"></use></svg></a></li>
+                    <li><a herf="javascript:volid(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dian"></use></svg></a></li>
+                    <li><a herf="javascript:volid(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dian"></use></svg></a></li>
+                </ul>
+                <svg class="icon close" aria-hidden="true"><use xlink:href="#icon-circle-chevron-up"></use></svg>
+            </div>
+        </div>
+    </div>
+    <script src="//at.alicdn.com/t/font_1457986_6c034kq7zyk.js"></script>
+    <script src="./js/init-canvas.js"></script>
+</body>
+</html>

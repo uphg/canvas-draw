@@ -1,0 +1,223 @@
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+body, ul, ol, li, h2, canvas {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+ul, ol, li {
+    list-style: none;
+}
+body { overflow: hidden; }
+.drawingBoard {
+    height: 100vh;
+    position: relative;
+    background-color: #fff;
+}
+.draw {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tool {
+    width: 100vw;
+    padding: 8px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #c8c7c8;
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.tool .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.tool .part {
+    display: inline-block;
+}.tool .part a {
+    cursor: pointer;
+}
+.tool .part > svg {
+    width: 26px;
+    height: 26px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.tool .part:nth-child(2) > svg {
+    width: 28px;
+    height: 28px;
+}
+.tool .part > svg.active {
+    transform: scale(1.2);
+    fill: #2f77f1;
+}
+.tool .color {
+    display: none;
+}
+.tool .color-list {
+    display: inline-block;
+}
+
+
+.tool .color-list ul { 
+    display: flex;
+    border-left: 1px solid #c8c7c8;
+    border-right: 1px solid #c8c7c8;
+    padding-left: 10px;
+}
+.tool .color-list li{
+    margin-right: 10px;
+}
+.tool .color-list li a.active svg {
+    display: inline-block;
+}
+.tool .color-list li a {
+    border: 2px solid #c0c0c0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+.tool .color-list li svg {
+    display: none;
+    width: 18px;
+    height: 18px;
+    fill: #ffffff;
+}
+.tool .color-list li:nth-child(5) svg,
+.tool .color-list li:nth-child(6) svg {
+    fill: #000000;
+}
+.tool .size {
+    position: relative;
+
+}
+.option {
+    position: fixed;
+    top: -85px;
+    left: 50%;
+    margin-left: -170px;
+    transition: all 0.5s;
+}
+.option.active {
+    transform: translateY(137px);
+}
+.option .size-list {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #c8c7c8;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.05);
+}
+.option .size-list h2 {
+    color: #3c4043;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.option .size-list .close {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 100%;
+    width: 18px;
+    height: 18px;
+    margin-left: -28px;
+    border-radius: 50%;
+    fill: #3c4043;
+}
+.option .size-list .close:hover {
+    fill: red;
+}
+
+.option .size-list.active {
+    display: inline-block;
+}
+.option .size-list ul {
+    display: flex;
+}
+
+.option .size-list li {
+    display: flex;
+    margin-right: 10px;
+}
+.option .size-list li:last-child {
+    margin-right: 0;
+}
+.option .size-list li a {
+    border: 2px solid #c0c0c0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+.option .size-list li a.active {
+    border-color: #2f77f1;
+}
+@media (max-width: 540px) {
+    .tool .color {
+        display: block;
+        position: absolute;
+        top: 8px;
+        left: 0;
+    }
+    .tool .color svg {
+        width: 26px;
+        height: 26px;
+        margin: 0 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+        align-items: left;
+    }.tool .color svg.active {
+        transform: scale(1.2);
+        fill: #2f77f1;
+    }
+    
+    .tool .color-list {
+        position: fixed;
+        top: 50px;
+        left: -52px;
+        padding: 0;
+        z-index: -2;
+        transition: all 0.3s;
+    }
+    .tool .color-list.active {
+        transform: translateX(52px);
+    }
+    .tool .color-list ul {
+        padding: 6px 0 0 6px;
+        display: inline-block;
+        border: 1px solid #c8c7c8;
+        border-left: 0;
+        background-color: #fff;
+        border-radius: 0 5px 5px 0;
+    }
+    .tool .color-list li {
+        margin-right: 8px;
+        margin-bottom: 10px;
+    }
+    .option {
+        margin-left: -94px;
+    }
+    .option.active {
+        transform: translateY(130px);
+    }
+}
