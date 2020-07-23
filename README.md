@@ -6,7 +6,7 @@
 
 ## 预览链接
 
-- 国内（码云）：[https://lv1024.gitee.io/canvas-draw/index.html](https://lv1024.gitee.io/canvas-draw/index.html)
+- 国内（码云）：[https://uphg.gitee.io/canvas-draw/index.html](https://uphg.gitee.io/canvas-draw/index.html)
 
-- 国外（GIthub）：[https://lv1024.github.io/canvas-draw/index.html](https://lv1024.github.io/canvas-draw/index.html)
+- 国外（GIthub）：[https://uphg.github.io/canvas-draw/index.html](https://uphg.github.io/canvas-draw/index.html)
 
